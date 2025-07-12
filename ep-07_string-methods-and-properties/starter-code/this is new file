@@ -1,0 +1,43 @@
+// tell if the number is palindrom
+
+function isPalindrom(n) {
+    if (n < 0) {
+        return "not a palindrom";
+    }
+    let reverse = 0;
+    let num_copy = n;
+    while (n > 0) {
+        let lastDigit = n % 10;
+        reverse = reverse * 10 + lastDigit;
+        n = Math.floor(n/ 10); 
+    }
+    if (reverse == num_copy) {
+        return true;
+    }
+    else return false;
+}
+
+console.log(isPalindrom(1331));
+// Output: true
+// Explanation:
+
+// The function `isPalindrom` checks if a given integer `n` is a palindrome.
+// It first checks if `n` is negative; if so, it returns "not a
+// palindrom" since negative numbers cannot be palindromes.
+// It then initializes a variable `reverse` to 0 and makes a copy of `n
+// to compare later.
+// A while loop is used to reverse the digits of `n` by extracting the last digit
+// and building the reversed number.
+// After the loop, it compares the reversed number with the original number.
+// If they are equal, it returns true, indicating that `n` is a palindrome.
+// Otherwise, it returns false. 
+// The output is printed to the console, showing whether the input number is a palindrome or not.
+// The function `isPalindrom` checks if a given integer `n` is a
+// palindrome. It first checks if `n` is negative; if so, it returns "not a palindrom" since negative numbers cannot be palindromes.
+// It then initializes a variable `reverse` to 0 and makes a copy of `n` to compare later.
+// A while loop is used to reverse the digits of `n` by extracting the last digit
+
+// and building the reversed number.
+// After the loop, it compares the reversed number with the original number.
+// If they are equal, it returns true, indicating that `n` is a palindrome.
+
